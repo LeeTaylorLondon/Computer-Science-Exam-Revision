@@ -1,0 +1,34 @@
+"""
+Undirected Graphs:
+    * An undirected graph G=(V,E) consists of:
+      - A set V of nodes (objects we are interested in)
+      - A set E of edges representing connections between
+        nodes.
+
+    * Example (A graph consists of two sets):
+          G = (V, E)
+          V = {A, B, C, D} : Nodes
+          E = {{A, B}, {A, C}, {A, D},
+               {B, D}} : Edges
+
+    * A path in a graph G=(V,E) is a sequence of nodes
+        (n1, n2, ..., nk)
+      such that n1, ..., nk ∈ V and {ni, ni+1}∈E, for i=1, ..., k-1
+    * The Length of a path is the number of edges it contains
+      i.e number of nodes less one (minus one))
+
+Cycle:
+    A cycle in a graph G=(V,E) is a path containing at least
+    two nodes that starts and ends at the same node and which
+    never uses an edge more than once.
+
+Acyclic:
+    A graph that contains no cycles is called an acyclic graph
+
+Graph Problems:
+    * Reach-ability: is there a path from one node to another
+    * Shortest path between two nodes
+    * Does the graph have a cycle?
+    * Can you split the graph into disjoint paths?
+    * etc.etc
+"""

@@ -17,7 +17,9 @@ BIGO_QUESTIONS = {1: big_o.equality,
 
 GRAPH_QUESTIONS = {1: graphs.trace_breadth,
                    2: graphs.trace_depth,
-                   3: graphs.trace_best}
+                   3: graphs.trace_best,
+                   4: graphs.trace_mst,
+                   5: graphs.trace_tsp}
 
 HASH_QUESTIONS = {1: hashing.produced,
                   2: hashing.result,

@@ -162,13 +162,14 @@ def traces(size:int=7) -> int:
     ans = []
     ans.append(actual_traces[0])
     for trace,state in zip(actual_traces[1:], states[1:]):
-        ans.append(state)
+        # ans.append(state)
         ans.append(trace)
     # First trace is always the original list
-    print('\nGive a high-level trace of applying insertion sort to the array given below.\n'
-          "    Format = (Jason Steggles' Format with Example Below):\n        i=1 A[i]=3 <Input Iteration, "
-          "& element. Press Enter>\n"
-          "        3 4 1 3 0 <Input list sorted up to point i. Press Enter & Repeat>\n")
+    # print('\nGive a high-level trace of applying insertion sort to the array given below.\n'
+    #       "    Format = (Jason Steggles' Format with Example Below):\n        i=1 A[i]=3 <Input Iteration, "
+    #       "& element. Press Enter>\n"
+    #       "        3 4 1 3 0 <Input list sorted up to point i. Press Enter & Repeat>\n")
+    print(f"Give a high-level trace of applying insertion sort to the array given below.")
     print("Array to be sorted: ", actual_traces[0])
     # Take user input for each trace
     for p in range(1, len(ans)):

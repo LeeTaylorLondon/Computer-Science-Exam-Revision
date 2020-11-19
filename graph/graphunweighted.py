@@ -1,6 +1,65 @@
 from typing import NoReturn, List
 
+
 class Graph:
+    """
+    This class represents a graph made up of a set of vertices and edges.
+
+
+    Attributes
+    ----------
+    vertices
+        Set of strings representing each vertex name.
+
+    edges
+        Set of frozen-sets (fset) where each fset represents an edge.
+
+    visited
+        Dictionary where key is node name and value is boolean
+        true if visited otherwise false. On initialization of this class
+        as an object, visited is equal to None. Self contained methods use
+        self.init_visited().
+
+
+    Functions
+    ---------
+    __repr__
+        Return string representation of Graph object
+
+    init_visited(self)
+        Sets self.visited equal to a dictionary where each key is a node
+        name and each value is set to False.
+
+    set_visited(self, vertex_name)
+        Deletes key with value, vertex_name, from attribute self.visited.
+
+    v(self)
+        Returns string of vertices.
+
+    e(self)
+        Returns string of edges.
+
+    get_neighbours(self, vertex_name)
+        Returns name of neighbours in a sorted list.
+
+    breadth(self)
+        Returns list of node names visited in breadth first search order.
+
+    get_unvisited(self)
+        Returns list of node names that have not been visited
+        in a sorted list.
+
+    all_visited(self)
+        Returns True if all nodes in the graph have been visited
+        otherwise False.
+
+    depth(self)
+        Returns list of node names visited in depth first search order.
+
+    depthTrav(self)
+        Apart of the depth. See method depth for more details.
+
+    """
     def __init__(self, v, e):
         # Set self.v (vertices) -> Can pass 'v' or 'vertices' as a str
         if (type(v) == str):

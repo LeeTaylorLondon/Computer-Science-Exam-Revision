@@ -34,6 +34,8 @@ with the line or 'none'.
 * <b>Graph</b> - input the traversal order of depth-first search for a randomly generated graph
 * <b>Graph</b> - input the traversal order of breadth-first search for a randomly generated graph
 * <b>Graph</b> - input which traversal algorithm will reach a random node in a randomly generated graph first
+* <b>Graph</b> - input the path and sum of the nearest neighbour algorithm for a randomly generated 'city' graph
+* <b>Graph</b> - input the minimal spanning tree nodes and weights for a randomly generated weighted graph
 
 ### Requirements
 * PyCharm Community Edition (or Higher)  

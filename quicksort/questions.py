@@ -111,7 +111,7 @@ def quicksort_traced(a: List[int], pl: int, pr: int, llt, trace:List[str]=None, 
 
 def partition_traced(a: List[int], l: int, r: int, llt, trace:List[str], w=False) -> NoReturn:
     # list_to_string used for question-function -> trace(...)
-    if (trace != None): trace.append(f"L={l} R={r} Pivot={a[r]}")
+    # if (trace != None): trace.append(f"L={l} R={r} Pivot={a[r]}")
     list_to_string(a, pivot=r, si=l, ei=r, trace=trace)
     pl, pr = l, r
     v = a[pr]
@@ -156,11 +156,12 @@ def trace(array: List[int]=[]) -> int:
     user_inp.append(traces[0])
     # Prompt user with question
     print(f'\nProvide a high level trace of quick sort applied to the array below.\n    {traces[0]}'
-          f"\n    Format = (Jason Steggles' Format with Example Below):"
-          f"\n        L=0, R=4: Pivot is 5 <Input left & right pointer values, & pivot value. Press Enter>"
-          f"\n        1 2 3 4 [5] <Input array from pl to pr with pivot in square brackets. Press Enter>"
-          f"\n        1 2 3 4 [5] <Input array after partition algorithm has run with pivot highlighted. Press Enter"
-          f" & Repeat>\n")
+          # f"\n    Format = (Jason Steggles' Format with Example Below):"
+          # f"\n        L=0, R=4: Pivot is 5 <Input left & right pointer values, & pivot value. Press Enter>"
+          # f"\n        1 2 3 4 [5] <Input array from pl to pr with pivot in square brackets. Press Enter>"
+          # f"\n        1 2 3 4 [5] <Input array after partition algorithm has run with pivot highlighted. Press Enter"
+          # f" & Repeat>\n"
+          )
     # User inputs each trace
     for inp in range(1, len(traces)):
         user_inp.append(str(input(f"Enter line: ")).strip())
@@ -228,5 +229,5 @@ def test_trace():
 
 if __name__ == '__main__':
     while True:
-        # test_trace()
+        test_trace()
         spot_wrong()

@@ -23,6 +23,9 @@ the original array. The user must pick out the correct array.
 * <b>Quicksort</b> - user is presented with low level traces of quicksort. one of the lines may be wrong the user must respond 
 with the line or 'none'.
 * <b>Binary Search</b> - input the high-level traces of searching for a value in a randomly generated array
+* <b>Binary Search Tree</b> - construct a BST from an array of random integers and input each depth
+* <b>Binary Search Tree</b> - input each depth of already constructed BST after inserting a new value
+* <b>Binary Search Tree</b> - input high level traces for searching for a key in a BST
 * <b>Hashing</b> - given an array of random values input the resultant array after inserting them using Linear Probing
 * <b>Hashing</b> - given a LinearProbe's values the user must indicate which array of random values produced the LinearProbe
 * <b>Hashing</b> - input high-level traces for searching for a value in a array of values inserted using Linear Probing

@@ -1,4 +1,4 @@
-from typing import NoReturn, List, Optional
+from typing import NoReturn, List, Optional, Tuple
 from random import randint
 
 class Node:
@@ -128,6 +128,31 @@ class BinarySearchTree:
                 return current_node
         return None
 
+    def search_traced(self, key) -> Tuple[List[str], Optional[Node]]:
+        # -> Tuple[List[str], Optional[Node]] || List[str]
+        """ Search for key in binary search tree """
+        # If user searches by node key is transmuted into integer
+        if (type(key) == Node):
+            key = key.value
+        # If user searches for non-integer, non-node then raise error
+        if (type(key) != int):
+            raise TypeError(f"Key must be of type 'int', not {type(key)}!")
+        # Init. trace
+        trace = []
+        # Perform comparisons to locate key
+        current_node = self.root
+        while (current_node != None):
+            if (key < current_node.value):
+                trace.append(f"{key}<{current_node.value} left")
+                current_node = current_node.left
+            elif (key > current_node.value):
+                trace.append(f"{key}>{current_node.value} right")
+                current_node = current_node.right
+            elif (key == current_node.value):
+                trace.append(f"{key}={current_node.value} found")
+                return trace, current_node
+        return trace, None
+
     def delete(self, key) -> NoReturn:
         # If key is non-integer non-node then raise error
         if (type(key) != int) and (type(key) != Node):
@@ -237,16 +262,8 @@ class BinarySearchTree:
                 except IndexError:
                     matrix.append([])
                     matrix[self.get_depth(node.right)].append(node.right)
-        # Debug display matrix
-        # for vec in matrix:
-        #     line = ''
-        #     for node in vec:
-        #         if (node != None):
-        #             line = line + ' ' + str(node.value)
-        #         else:
-        #             line = line + ' none'
-        #     print(line[1:])
-        return matrix
+        # Ending array is omitted as it only contains None values
+        return matrix[:-1]
 
     def __repr__(self) -> str:
         """ :returns: String representation of BST """
@@ -256,7 +273,8 @@ class BinarySearchTree:
 def nodes_to_ints(vec: List[Node]) -> NoReturn:
     """ Passed a list of nodes each element becomes an int """
     for i,elm in enumerate(vec):
-        if (elm != None): vec[i] = elm.value
+        if (elm != None):
+            vec[i] = elm.value
 
 def return_rarray(_min=1, _max=10, size=5, duplicates=False) -> List[int]:
     """

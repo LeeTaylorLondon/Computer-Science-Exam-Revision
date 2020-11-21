@@ -1,6 +1,6 @@
 from bigo import questions as big_o
 from binsearch import questions as bsearch
-# from binsearchtree import questions as ...
+from binsearchtree import questions as bst
 from graph import questions as graphs
 from hashing import questions as hashing
 from insertion import insertion_sort as isort
@@ -44,13 +44,18 @@ STR_QUESTIONS = {1: strsearch.bf_comps,
 BINSEARCH_QUESTIONS = {1: bsearch.trace,
                        2: bsearch.recursive_calls}
 
+BST_QUESTIONS = {1: bst.bst,
+                 2: bst.insert,
+                 3: bst.search}
+
 ALL_QUESTIONS = {1: BIGO_QUESTIONS,
-                 2: BINSEARCH_QUESTIONS,
-                 3: ISORT_QUESTIONS,
-                 4: QSORT_QUESTIONS,
-                 5: HASH_QUESTIONS,
-                 6: STR_QUESTIONS,
-                 7: GRAPH_QUESTIONS
+                 2: ISORT_QUESTIONS,
+                 3: QSORT_QUESTIONS,
+                 4: BINSEARCH_QUESTIONS,
+                 5: BST_QUESTIONS,
+                 6: HASH_QUESTIONS,
+                 7: STR_QUESTIONS,
+                 8: GRAPH_QUESTIONS
                  }
 
 

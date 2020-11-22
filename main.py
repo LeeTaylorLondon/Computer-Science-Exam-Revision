@@ -74,10 +74,11 @@ def random_questions():
 if __name__ == '__main__':
     # User determines whether random questions or not
     user_inp = ''
-    while (user_inp != 'random') and (user_inp != 'order'):
+    while (user_inp != 'random') and (user_inp != 'order') and (user_inp != 'orderx'):
         print(f"\n\nPlease enter either of the following strings below: ")
         print(f"    'random' - Questions will be chosen at random")
         print(f"    'order' - Questions will be called in order learned")
+        print(f"    'orderx' - Each question will be called x times. Questions are in order learned.")
         user_inp = str(input("\nEnter choice: "))
     # Picks random question from all hashes storing question functions
     if (user_inp == 'random'):
@@ -88,3 +89,13 @@ if __name__ == '__main__':
         for topic in ALL_QUESTIONS.values():
             for question in topic.values():
                 question()
+    elif (user_inp == 'orderx'):
+        try:
+            x = int(input("Input integer: "))
+        except ValueError:
+            print("Invalid input. X set as 1.")
+            x = 1
+        for topic in ALL_QUESTIONS.values():
+            for call in range(x):
+                for question in topic.values():
+                    question()

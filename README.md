@@ -52,9 +52,10 @@ Fork this project and run main.py. Upon running the program you will be prompted
         'order' - Questions will be called in order learned
 
     Enter choice: 
-Typing <b>'order'</b> and pressing <b>enter</b>, the questions will be presented in the order learned during the module.
-Typing <b>'random'</b> and pressing <b>enter</b>, a random question will be presented, after answering, another will and
-so on...     
+Typing <b>'random'</b> and pressing <b>enter</b>, random questions will be asked to no end.  
+Typing <b>'order'</b> and pressing <b>enter</b>, the questions will be presented in the order learned during the module.  
+Typing <b>'orderx'</b> and pressing <b>enter</b>, each question programmed will be called x times, where x is equal to
+user input. Questions are presented in the order learned during the module.
     
 ### License
 

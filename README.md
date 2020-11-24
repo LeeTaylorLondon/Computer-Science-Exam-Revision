@@ -1,4 +1,4 @@
-# Revision Software CSC2032
+# Revision Software for Module - CSC2032 - Algorithm Design and Analysis
 ### Synopsis 
 The purpose of this program is to ask the same questions found in the tutorials and quizzes. But with different variables 
 in place.
@@ -50,6 +50,7 @@ Fork this project and run main.py. Upon running the program you will be prompted
     Please enter either of the following strings below: 
         'random' - Questions will be chosen at random
         'order' - Questions will be called in order learned
+        'orderx' - Each question will be called x times. Questions are in order learned.
 
     Enter choice: 
 Typing <b>'random'</b> and pressing <b>enter</b>, random questions will be asked to no end.  

@@ -33,7 +33,6 @@ def test_table():
     print("ABAB: " + str(find_next("ABAC")))
     print("ABABC: " + str(find_next("ABACB")))
 
-
 # noinspection SpellCheckingInspection
 def test_kmp():
     table("ABCABB", True)

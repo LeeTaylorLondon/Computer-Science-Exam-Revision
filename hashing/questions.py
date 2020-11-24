@@ -80,7 +80,7 @@ def produced() -> NoReturn:
     # Init. question variables
     _min, _max, size, lp_size, swap_iters, valid_answers = 11, 64, 6, 8, 12, 0
     # Tries arrays of random integers until only 1 valid answer is possible
-    valid = randint(3, 4)
+    valid = 1
     while (valid_answers != valid):
         vector = return_rarray(_min, _max, size)
         matrix = []
